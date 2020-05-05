@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AHP-Topsis</title>
+
+    <!-- File Css  -->
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/font-awesome.css">
+</head>
+
+<body>
+    <!-- Navigation Bar Atas -->
+    <div id="topNav">
+        <nav class="navbar fixed-top navbar-expand-md navbar-light" style="background-color:#22242A;">
+            <div class="ml-3">
+                <a class="navbar-brand"">
+                    <h3 class=" mt-3" style="color: white;"><i class="fa fa-bars" id="navButton"></i>
+                    SPK AHP-Topsis</h3>
+                </a>
+            </div>
+        </nav>
+    </div>
+    <!-- Navigation Bar Atas -->
+
+    <!-- Navigation Bar Samping -->
+    <div id="mySidenav" class="sidenav">
+        <div>
+            <center>
+                <a href="index.html">
+                    <i class="fa fa-desktop fa-4x" style="color: white;"></i>
+                    <h5 class="centered" style="color: white;">Dashboard</h5>
+                </a>
+            </center>
+            <br>
+            <ul class="menu">
+                <li>
+                    <a href="kriteria.html"><i class="fa fa-clipboard"></i> Data Kriteria</a>
+                </li>
+                <li>
+                    <a href="alternatif.html"><i class="fa fa-clipboard"></i> Data Alternatif</a>
+                </li>
+                <li>
+                    <a href="hasil.html"><i class="fa fa-book"></i> Hasil Perhitungan</a>
+                </li>
+                <li>
+                    <a href="../index.html"><i class="fa fa-sign-out"></i> Keluar</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- Navigation Bar Samping -->
+
+    <div class="main p-4" id="content">
+
+        <!-- Part 1 -->
+        <div class="container-fluid">
+            <div class="card">
+                <div class="card-header bg-warning font-weight-bolder">
+                    Selamat Datang di
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">Sistem Pendukung Keputusan AHP-Topsis</h4>
+                    <p class="card-text">AHP-Topsis Decision Support System Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Id temporibus ab hic nobis beatae laborum, ut consequuntur consectetur eius
+                        sint necessitatibus quibusdam tenetur expedita rem deleniti aut! Iure, minus officiis!</p>
+                </div>
+            </div>
+        </div>
+        <!-- Part 1 -->
+
+        <!-- Part 2 -->
+        <div class="container-fluid">
+            <div class="row mt-3">
+
+                <!-- Table Criteria -->
+                <div class="col-md-5">
+                    <div class="card">
+                        <div class="card-header font-weight-bolder bg-dark text-light">
+                            Daftar Kriteria
+                            <a href="kriteria.html" class="btn btn-warning btn-sm float-right font-weight-bold">Data
+                                Kriteria</a>
+                        </div>
+                        <div class="card-body">
+                            <div style="overflow-x:auto;">
+                                <table class="table table-bordered" id="tabelKriteria">
+                                    <thead class="thead-light">
+                                        <tr>
+                                            <th>NO</th>
+                                            <th>Kriteria</th>
+                                            <th>Tipe</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="criteria-table">
+                                        <!-- Isi tabel -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Table Criteria -->
+
+                <!-- Table Alternatif -->
+                <div class="col-md-7">
+                    <div class="card">
+                        <div class="card-header font-weight-bolder bg-dark text-light">
+                            Daftar Alternatif
+                            <a href="alternatif.html"
+                                class="btn btn-warning btn-sm float-right font font-weight-bold">Data Alternatif</a>
+                        </div>
+                        <div class="card-body">
+                            <div style="overflow-x:auto;">
+                                <table class="table table-bordered" id="tabelAlternatif">
+                                    <thead class="thead-light" id="head">
+                                        <!-- berdasarkan jumlah criteria  -->
+                                    </thead>
+                                    <tbody class="alternatif-table">
+                                        <!-- Isi tabel -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Table Alternatif -->
+
+            </div>
+        </div>
+        <!-- Part 2 -->
+
+        <!-- Part 3 -->
+        <div class="container-fluid">
+            <div class="card mt-3">
+                <div class="card-header bg-warning font-weight-bolder">
+                    Hasil Perangkingan Menggunakan Metode AHP-Topsis
+                </div>
+                <div class="card-body">
+                    <div class="container-fluid">
+                        <div class="row">
+
+                            <!-- Table Hasil -->
+                            <div class="col-md-8" style="overflow-x:auto;">
+                                <table class="table table-bordered" id="tabelHasil">
+                                    <thead class="thead-light">
+                                        <tr>
+                                            <th>Alternatif</th>
+                                            <th>Nama</th>
+                                            <th>Nilai</th>
+                                            <th>Peringkat</>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="result-table">
+                                        <!-- Isi tabel -->
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- Table Hasil -->
+
+                            <div class="col-md-4">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eum, quae vitae
+                                reprehenderit esse odio culpa accusamus, unde totam debitis voluptas nesciunt suscipit
+                                quia sed sunt dolor ea officia rerum. Lorem ipsum, dolor sit amet consectetur
+                                adipisicing elit. Deserunt natus assumenda quisquam quia voluptatibus ullam. Corrupti
+                                accusamus dolores in id nam, eum laudantium ratione omnis doloremque delectus ullam!
+                                Quod, cumque!
+                                <div class="mt-3">
+                                    <a href="hasil.html"
+                                        class="btn btn-warning btn-sm float-left align-items-end font-weight-bold">Lihat
+                                        Perhitungan</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Part 3 -->
+
+        <br>
+    </div>
+
+    <script src="../js/jquery-3.5.0.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

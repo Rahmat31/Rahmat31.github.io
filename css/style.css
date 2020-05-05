@@ -1,0 +1,111 @@
+/* The sidebar menu */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #2F323A;
+    overflow-x: hidden;
+    padding-top: 140px;
+    transition: 0.5s;
+}
+
+.sidenav-show {
+    width: 250px;
+}
+
+.menu {
+    list-style: none;
+    padding-left: 0px;
+}
+
+.card {
+    border: 1px solid black;
+}
+
+.sidenav a {
+    padding: 5px 10px 0px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: ease-in-out;
+
+}
+
+.sidenav li {
+    padding: 10px 10px 10px 10px;
+}
+
+.sidenav li:hover {
+    background-color: #E0A800;
+    color: black
+}
+
+/* When you mouse over the navigation links, change their color */
+
+/* Style page content */
+.main {
+    margin-top: 90px;
+    padding: 0px 10px;
+}
+
+.smoll {
+    height: 25px;
+    font-size: 10px;
+    margin: 0;
+}
+
+#content {
+    margin: 10px;
+    margin-top: 95px !important;
+    padding: 10px;
+    background-color: #F1F1F1;
+    border-radius: 7px;
+}
+
+td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+th {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table {
+    font-size: 13px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+    body {
+        font-size: 0.8rem;
+    }
+
+    .card {
+        font-size: 0.8rem;
+    }
+
+    .table {
+        font-size: 9px;
+    }
+
+    .card {
+        margin-top: 20px;
+    }
+}
