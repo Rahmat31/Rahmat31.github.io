@@ -86,13 +86,65 @@
                         <tbody class="alternatif-table">
                         </tbody>
                     </table>
-                    <a href="" class="btn btn-primary btn-sm"> Tambah Alternatif </a>
+                    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal"
+                        data-target="#tambah-modal">
+                        Tambah Alternatif
+                    </button>
                 </div>
             </div>
         </div>
         <!-- Part 1 -->
-
     </div>
+
+
+    <!-- Modal List -->
+    <!-- Modal Tambah -->
+    <div class="modal fade bd-example-modal-lg" id="tambah-modal" tabindex="-1" role="dialog"
+        aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Tambah Alternatif</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="tambahForm">
+                        <!-- isi form -->
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" id="tambah">Simpan</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Edit -->
+    <div class="modal fade bd-example-modal-lg" id="edit-modal" tabindex="-1" role="dialog"
+        aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Edit Alternatif</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="editForm">
+                        <!-- isi form -->
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" id="edit">Simpan</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  -->
 
     <script src="../js/jquery-3.5.0.js"></script>
     <script src="../js/popper.min.js"></script>
