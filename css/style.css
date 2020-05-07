@@ -44,6 +44,11 @@
     color: black
 }
 
+.input-group-addon {
+    min-width: 175px;
+    text-align: left;
+}
+
 /* When you mouse over the navigation links, change their color */
 
 /* Style page content */

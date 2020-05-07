@@ -24,51 +24,59 @@ topNav.addEventListener('click', function () {
 });
 
 tambah.addEventListener('click', async function (e) {
-    // cek input validasi jika benar jalankan
-
-    // ambil data sekarang
-    const alt = await getAlternatif();
-
     // ambil data dari form
     let data = getDataTable();
 
-    //gabungkan data
-    alt.push(data);
+    // cek input validasi jika benar jalankan
+    let validasi = validasiInput(data);
 
-    // simpan 
-    localStorage.setItem("alternatif", JSON.stringify(alt));
+    if (validasi) {
+        // ambil data sekarang
+        const alt = await getAlternatif();
 
-    //update tabel
-    updateTableAlternatif(alt);
+        //gabungkan data
+        alt.push(data);
 
-    // clear form
-    document.getElementById("tambahForm").reset();
+        // simpan 
+        localStorage.setItem("alternatif", JSON.stringify(alt));
+
+        //update tabel
+        updateTableAlternatif(alt);
+
+        // clear form
+        document.getElementById("tambahForm").reset();
+    } else {
+        alert("Harap isi data dengan benar");
+    }
+
+
 });
 
 edit.addEventListener('click', async function (e) {
-    // cek input validasi jika benar jalankan
-
-    // ambil data sekarang
-    const alt = await getAlternatif();
-
     // ambil data dari form
     let data = getDataTableEdit();
 
-    //index ke-
-    let idx = this.parentElement.previousSibling.previousSibling.firstChild.nextSibling.firstChild.getAttribute("value");
+    // cek input validasi jika benar jalankan
+    let validasi = validasiInput(data);
 
-    // masukan ke data/edit
-    alt.splice(idx, 1, data);
+    if (validasi) {
+        // ambil data sekarang
+        const alt = await getAlternatif();
 
+        //index ke-
+        let idx = this.parentElement.previousSibling.previousSibling.firstChild.nextSibling.firstChild.getAttribute("value");
 
-    console.log(alt);
+        // masukan ke data/edit
+        alt.splice(idx, 1, data);
 
-    // simpan 
-    localStorage.setItem("alternatif", JSON.stringify(alt));
+        // simpan 
+        localStorage.setItem("alternatif", JSON.stringify(alt));
 
-    //update tabel
-    updateTableAlternatif(alt);
-
+        //update tabel
+        updateTableAlternatif(alt);
+    } else {
+        alert("Harap isi data dengan benar");
+    }
 });
 
 
@@ -126,7 +134,11 @@ function setAlternatif(n) {
 }
 
 function getCriteria() {
-    return fetch('json/criteria.json').then(response => response.json()).then(response => response);
+    if (JSON.parse(localStorage.getItem("kriteria")) == null) {
+        return fetch('json/criteria.json').then(response => response.json()).then(response => response);
+    } else {
+        return JSON.parse(localStorage.getItem("kriteria"));
+    }
 }
 
 function getAlternatif() {
@@ -242,4 +254,14 @@ async function hapusAlternatif(idx) {
 
     //update tabel
     updateTableAlternatif(alt);
+}
+
+function validasiInput(data) {
+    let bool = true;
+    if (data.nama == '') {
+        bool = false;
+    } else if (data.nilai.includes(NaN)) {
+        bool = false;
+    }
+    return bool;
 }

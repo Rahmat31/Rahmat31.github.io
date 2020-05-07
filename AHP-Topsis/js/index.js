@@ -88,11 +88,19 @@ function setAlternatif(n) {
 }
 
 function getCriteria() {
-    return fetch('json/criteria.json').then(response => response.json()).then(response => response);
+    if (JSON.parse(localStorage.getItem("kriteria")) == null) {
+        return fetch('json/criteria.json').then(response => response.json()).then(response => response);
+    } else {
+        return JSON.parse(localStorage.getItem("kriteria"));
+    }
 }
 
 function getAlternatif() {
-    return fetch('json/alternatif.json').then(response => response.json()).then(response => response);
+    if (JSON.parse(localStorage.getItem("alternatif")) == null) {
+        return fetch('json/alternatif.json').then(response => response.json()).then(response => response);
+    } else {
+        return JSON.parse(localStorage.getItem("alternatif"));
+    }
 }
 
 function hitungAHP(crit) {
@@ -113,7 +121,7 @@ function hitungAHP(crit) {
     if (nilaiCR < 0.1) {
         return bobot;
     } else {
-        alert('Harap edit Kriteria, Nilai CR =' + nilaiCR);
+        alert('Harap edit Kriteria, Nilai CR =' + nilaiCR.toFixed(4));
     }
 
     // console.log(nilai);

@@ -72,7 +72,7 @@
             </div>
 
             <div class="row">
-                <div class="col-md-7">
+                <div class="col-md-5">
                     <!-- Tabel Kriteria -->
                     <div class="card mb-3">
                         <div class="card-header bg-dark text-light">
@@ -92,13 +92,14 @@
                                     <!-- Isi tabel -->
                                 </tbody>
                             </table>
-                            <button type="button" class="btn btn-primary btn-sm" id="addCriteria">Tambah
+                            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal"
+                                data-target="#tambah-modal" id="addCriteria">Tambah
                                 Kriteria</button>
                         </div>
                     </div>
                     <!-- Tabel Kriteria -->
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-7">
                     <!-- Tabel Kepentingan -->
                     <div class="card">
                         <div class="card-header bg-dark text-light">
@@ -113,17 +114,60 @@
                                     <!-- Isi tabel -->
                                 </tbody>
                             </table>
-                            <button type="button" class="btn btn-primary btn-sm">Edit Nilai Kepentingan</button>
                         </div>
                     </div>
                     <!-- Tabel Kepentingan -->
                 </div>
             </div>
-
-
         </div>
         <!-- Part 1 -->
+    </div>
 
+    <!-- Modal Tambah -->
+    <div class="modal fade bd-example-modal-lg" id="tambah-modal" tabindex="-1" role="dialog"
+        aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Tambah Kriteria</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="tambahForm">
+                        <!-- isi form -->
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" id="tambah">Simpan</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Edit -->
+    <div class="modal fade bd-example-modal-lg" id="edit-modal" tabindex="-1" role="dialog"
+        aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Edit Kriteria</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="editForm">
+                        <!-- isi form -->
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" id="simpan">Simpan</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="../js/jquery-3.5.0.js"></script>

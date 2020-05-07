@@ -23,14 +23,16 @@ $(document).ready(async function () {
     const criteria = await getCriteria();
     const alternatif = await getAlternatif();
 
+    updateTableCriteria(criteria);
+    updateTableAlternatif(alternatif);
+
     const bobot = hitungAHP(criteria);
 
     const hasil = hitungTopsis(alternatif, bobot, criteria);
 
     //const rank = hitungRangking(hasil);
 
-    updateTableCriteria(criteria);
-    updateTableAlternatif(alternatif);
+
 
 });
 
@@ -74,11 +76,19 @@ function setAlternatif(n) {
 }
 
 function getCriteria() {
-    return fetch('json/criteria.json').then(response => response.json()).then(response => response);
+    if (JSON.parse(localStorage.getItem("kriteria")) == null) {
+        return fetch('json/criteria.json').then(response => response.json()).then(response => response);
+    } else {
+        return JSON.parse(localStorage.getItem("kriteria"));
+    }
 }
 
 function getAlternatif() {
-    return fetch('json/alternatif.json').then(response => response.json()).then(response => response);
+    if (JSON.parse(localStorage.getItem("alternatif")) == null) {
+        return fetch('json/alternatif.json').then(response => response.json()).then(response => response);
+    } else {
+        return JSON.parse(localStorage.getItem("alternatif"));
+    }
 }
 
 function hitungAHP(crit) {
@@ -102,7 +112,7 @@ function hitungAHP(crit) {
     if (nilaiCR < 0.1) {
         return bobot;
     } else {
-        alert('Harap edit Kriteria, Nilai CR =' + nilaiCR);
+        alert('Harap edit Kriteria, Nilai CR =' + nilaiCR.toFixed(4));
     }
 
     // console.log(nilai);
@@ -412,7 +422,7 @@ function updateTable1(m, total) {
     row += `<tr class="bg-primary">
             <td><b>Total<b></td>`;
     total.forEach(x => {
-        row += `<td><b>${x}</b></td>`;
+        row += `<td><b>${x.toFixed(3)}</b></td>`;
     })
     row += `</tr>`;
     head += `</tr>`;
