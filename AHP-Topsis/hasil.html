@@ -64,9 +64,9 @@
                 </div>
                 <div class="card-body">
                     <h4 class="card-title">Sistem Pendukung Keputusan AHP-Topsis</h4>
-                    <p class="card-text">AHP-Topsis Decision Support System Lorem ipsum dolor sit amet consectetur
-                        adipisicing elit. Id temporibus ab hic nobis beatae laborum, ut consequuntur consectetur eius
-                        sint necessitatibus quibusdam tenetur expedita rem deleniti aut! Iure, minus officiis!</p>
+                    <p class="card-text">
+                        Berikut adalah langkah perhitungan dengan metode AHP-Topsis.
+                    </p>
                 </div>
             </div>
         </div>
@@ -129,9 +129,9 @@
                     <!--  -->
                     <div class="card mb-3">
                         <div class="card-body">
-                            <h6 class="card-title font-weight-bold">Menentukan Tabel Perbandingan Berpasangan</h6>
+                            <h4 class="card-title font-weight-bold">Menentukan Tabel Perbandingan Berpasangan</h4>
                             <p class="card-text">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+
                             </p>
                             <!-- Tabel -->
                             <div class="row">
@@ -146,9 +146,10 @@
                                     </table>
                                 </div>
                                 <div class="col-md-6">
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam architecto officiis,
-                                    quod reiciendis fuga eius dicta illo ipsam praesentium atque beatae sint commodi
-                                    saepe tempore distinctio nisi aspernatur accusamus tempora?
+                                    Konsep dasar AHP adalah penggunaan matriks pairwise comparison (matriks perbandingan
+                                    berpasangan) untuk menghasilkan bobot relative antar kriteria. Suatu kriteria akan
+                                    dibandingkan dengan kriteria lainnya dalam hal seberapa penting kriteria tersebut
+                                    dibandingkan kriteria lain.
                                 </div>
                             </div>
                             <!--  -->
@@ -157,11 +158,9 @@
                     <!--  -->
                     <div class="card mb-3">
                         <div class="card-body">
-                            <h6 class="card-title">Menghitung Nilai Eigen</h6>
+                            <h4 class="card-title font-weight-bold">Menghitung Nilai Eigen</h4>
                             <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
                             <p class="card-text">
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed ea reprehenderit molestiae
-                                rerum iure ullam numquam at perferendis vero.
                             </p>
                             <!-- Tabel -->
                             <div class="row">
@@ -188,9 +187,10 @@
                                     </table>
                                 </div>
                                 <div class="col-md-4">
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam architecto officiis,
-                                    quod reiciendis fuga eius dicta illo ipsam praesentium atque beatae sint commodi
-                                    saepe tempore distinctio nisi aspernatur accusamus tempora?
+                                    Normalisasi tabel sebelumnya dengan membagi nilai tiap kolom dengan nilai
+                                    total pada kolom tersebut. <br><br>
+                                    Nilai Eigen dihitung dengan mencari rata-rata tiap baris dari tabel
+                                    yang telah dinormalisasi.
                                 </div>
                             </div>
                             <!--  -->
@@ -199,10 +199,10 @@
                     <!--  -->
                     <div class="card mb-3">
                         <div class="card-body">
-                            <h6 class="card-title">Menghitung Konsistensi</h6>
+                            <h4 class="card-title font-weight-bold">Menghitung Konsistensi</h4>
                             <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
                             <p class="card-text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+
                             </p>
                             <!-- Tabel -->
                             <div class="row">
@@ -217,9 +217,13 @@
                                     </table>
                                 </div>
                                 <div class="col-md-4">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam saepe rem odit a
-                                    unde quia. Quis et sapiente, harum obcaecati molestias accusantium quam unde quidem,
-                                    voluptatibus vel cupiditate in nam.
+                                    Langkah menghitung Nilai Konsistensi <br><br>
+                                    1. Kalikan tiap kolom Tabel Perbandingan Berpasangan dengan Nilai eigen yang
+                                    didapat. <br> <br>
+                                    2. Hitung total tiap baris. <br> <br>
+                                    3. Hitung nilai lamda (&#955) dengan membagi nilai total dengan nilai eigen.
+                                    <br><br>
+                                    4. Hitung Lamda(&#955) max dengan menghitung rata-rata nilai lamda(&#955).
                                 </div>
                             </div>
                             <div class="row">
@@ -248,9 +252,17 @@
                                     </table>
                                 </div>
                                 <div class="col-md-4">
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium, dolorum id
-                                    incidunt placeat porro earum voluptas recusandae libero enim consequuntur molestias
-                                    perferendis tempore quam voluptatibus adipisci nulla? Dolorem, veniam blanditiis!
+                                    5. Hitung Nilai CI dengan rumus berikut : <br>
+                                    <img src="img/1.png" height="70px" alt=""> <br>
+
+                                    6. Hitung Nilai CR dengan rumus berikut : <br>(Nilai RI ditentukan berdasarkan
+                                    jumlah
+                                    kriteria) <br>
+                                    <img src="img/2.png" height="70px" alt=""> <br>
+                                    <img src="img/3.png" class="img-fluid" alt="Responsive image"> <br><br>
+                                    Jika nilai CR kurang dari 0,1 (10%) maka matriks memiliki
+                                    perbandingan yang konsisten sedangkan, jika Nilai CR lebih dari 0,1 (10%) maka nilai
+                                    perbandingan kriteria perlu diubah.
                                 </div>
                             </div>
                             <!--  -->
@@ -271,9 +283,9 @@
                     <!--  -->
                     <div class="card mb-3">
                         <div class="card-body">
-                            <h6 class="card-title font-weight-bold">Menormalisasi Matriks Keputusan</h6>
+                            <h4 class="card-title font-weight-bold">Menormalisasi Matriks Keputusan</h4>
                             <p class="card-text">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+
                             </p>
                             <!-- Tabel -->
                             <div class="row">
@@ -288,13 +300,12 @@
                                     </table>
                                 </div>
                                 <div class="col-md-6">
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam architecto officiis,
-                                    quod reiciendis fuga eius dicta illo ipsam praesentium atque beatae sint commodi
-                                    saepe tempore distinctio nisi aspernatur accusamus tempora?
+                                    Hitung Matrik Keputusan Normalisasi dengan Rumus : <br>
+                                    <img src="img/4.png" alt="">
                                 </div>
                             </div>
                             <!--  -->
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. .</p>
+                            <p>Hasil Normalisasi</p>
                             <div class="row">
                                 <div class="col-md-6" style="overflow-x:auto;">
                                     <table class="table table-bordered">
@@ -307,9 +318,7 @@
                                     </table>
                                 </div>
                                 <div class="col-md-6">
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam architecto officiis,
-                                    quod reiciendis fuga eius dicta illo ipsam praesentium atque beatae sint commodi
-                                    saepe tempore distinctio nisi aspernatur accusamus tempora?
+
                                 </div>
                             </div>
                             <!--  -->
@@ -318,9 +327,9 @@
                     <!--  -->
                     <div class="card mb-3">
                         <div class="card-body">
-                            <h6 class="card-title font-weight-bold">Menghitung Matriks Normalisasi Terbobot</h6>
+                            <h4 class="card-title font-weight-bold">Menghitung Matriks Normalisasi Terbobot</h4>
                             <p class="card-text">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+
                             </p>
                             <!-- Tabel -->
                             <div class="row">
@@ -335,9 +344,9 @@
                                     </table>
                                 </div>
                                 <div class="col-md-6">
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam architecto officiis,
-                                    quod reiciendis fuga eius dicta illo ipsam praesentium atque beatae sint commodi
-                                    saepe tempore distinctio nisi aspernatur accusamus tempora?
+                                    Kalikan Tiap kolom dengan bobot kriteria yang didapat dari proses AHP (Nilai Eigen).
+                                    <br>
+                                    <img src="img/5.png" alt="">
                                 </div>
                             </div>
                             <!--  -->
@@ -346,10 +355,10 @@
                     <!--  -->
                     <div class="card mb-3">
                         <div class="card-body">
-                            <h6 class="card-title font-weight-bold">Menghitung Solusi Ideal Positif dan Negatif tiap
-                                Kriteria</h6>
+                            <h4 class="card-title font-weight-bold">Menghitung Solusi Ideal Positif dan Negatif tiap
+                                Kriteria</h4>
                             <p class="card-text">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+
                             </p>
                             <!-- Tabel -->
                             <div class="row">
@@ -380,9 +389,11 @@
                                     </table>
                                 </div>
                                 <div class="col-md-6">
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam architecto officiis,
-                                    quod reiciendis fuga eius dicta illo ipsam praesentium atque beatae sint commodi
-                                    saepe tempore distinctio nisi aspernatur accusamus tempora?
+                                    Solusi ideal Positif adalah nilai maksimum pada tiap kriteria, jika kriteria bertipe
+                                    cost maka yang diambil adalah nilai minimum. <br><br>
+
+                                    Solusi ideal Negatif adalah nilai minimun pada tiap kriteria, jika kriteria bertipe
+                                    cost maka yang diambil adalah nilai maksimum. <br><br>
                                 </div>
                             </div>
                             <!--  -->
@@ -391,10 +402,10 @@
                     <!--  -->
                     <div class="card mb-3">
                         <div class="card-body">
-                            <h6 class="card-title font-weight-bold">Menghitung Jarak Ideal Positif dan Negatif tiap
-                                Alternatif</h6>
+                            <h4 class="card-title font-weight-bold">Menghitung Jarak Ideal Positif dan Negatif tiap
+                                Alternatif</h4>
                             <p class="card-text">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+
                             </p>
                             <!-- Tabel -->
                             <div class="row">
@@ -425,9 +436,14 @@
                                     </table>
                                 </div>
                                 <div class="col-md-6">
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam architecto officiis,
-                                    quod reiciendis fuga eius dicta illo ipsam praesentium atque beatae sint commodi
-                                    saepe tempore distinctio nisi aspernatur accusamus tempora?
+                                    Jarak Ideal Positif : <br>
+                                    <img src="img/6.png" alt=""> <br><br>
+                                    Jarak Ideal Negatif : <br>
+                                    <img src="img/7.png" alt=""> <br><br>
+                                    Keterangan <br>
+                                    yj+ = solusi ideal positif untuk atribut ke-j <br>
+                                    yj- = solusi ideal negatif untuk atribut ke-j <br>
+                                    yij = elemen dari matriks keputusan yang ternormalisai terbobot Y
                                 </div>
                             </div>
                         </div>
@@ -435,9 +451,9 @@
                     <!--  -->
                     <div class="card mb-3">
                         <div class="card-body">
-                            <h6 class="card-title font-weight-bold">Menghitung Nilai Akhir dan menentukan Peringkat</h6>
+                            <h4 class="card-title font-weight-bold">Menghitung Nilai Akhir dan menentukan Peringkat</h4>
                             <p class="card-text">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+
                             </p>
                             <!-- Tabel -->
                             <div class="row">
@@ -456,9 +472,11 @@
                                     </table>
                                 </div>
                                 <div class="col-md-6">
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam architecto officiis,
-                                    quod reiciendis fuga eius dicta illo ipsam praesentium atque beatae sint commodi
-                                    saepe tempore distinctio nisi aspernatur accusamus tempora?
+                                    Menghitung nilai Akhir (Nilai Preferensi) : <br>
+                                    <img src="img/8.png" alt=""> <br><br>
+
+                                    Hasil dengan nilai tertinggi adalah Alternatif Terbaik.
+
                                 </div>
                             </div>
                         </div>
