@@ -1,25 +1,25 @@
 [{
-        "kriteria": "Jumlah Gol",
+        "kriteria": "Kriteria 1",
         "jenis": "Benefit",
         "nilai": [1, 3, 3, 5, 5]
     },
     {
-        "kriteria": "Jumlah Assist",
+        "kriteria": "Kriteria 2",
         "jenis": "Benefit",
         "nilai": [0.333, 1, 1, 3, 3]
     },
     {
-        "kriteria": "Shot on Target",
+        "kriteria": "Kriteria 3",
         "jenis": "Benefit",
         "nilai": [0.333, 1, 1, 3, 1]
     },
     {
-        "kriteria": "Kemenangan Tim",
+        "kriteria": "Kriteria 4",
         "jenis": "Benefit",
         "nilai": [0.2, 0.333, 0.333, 1, 1]
     },
     {
-        "kriteria": "Waktu bermain",
+        "kriteria": "Kriteria 5",
         "jenis": "Benefit",
         "nilai": [0.2, 0.333, 1, 1, 1]
     }
