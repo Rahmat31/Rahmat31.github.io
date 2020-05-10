@@ -1,3 +1,4 @@
+////////////// Event Handler
 const navButton = document.getElementById("navButton");
 const mySidenav = document.getElementById("mySidenav");
 const topNav = document.getElementById("topNav");
@@ -19,6 +20,8 @@ topNav.addEventListener('click', function () {
         mySidenav.classList.toggle("sidenav-show");
     }
 });
+///////////
+
 
 $(document).ready(async function () {
     const criteria = await getCriteria();
@@ -103,6 +106,7 @@ function getAlternatif() {
     }
 }
 
+///////////////////// AHP
 function hitungAHP(crit) {
     //Ambil nilai perbandingan dan total
     const nilai = getPerbandingan(crit);
@@ -123,13 +127,6 @@ function hitungAHP(crit) {
     } else {
         alert('Harap edit Kriteria, Nilai CR =' + nilaiCR.toFixed(4));
     }
-
-    // console.log(nilai);
-    // console.log(total);
-    // console.log(normalisasi);
-    // console.log(bobot);
-    // console.log(nilaiCR);
-
 }
 
 function getPerbandingan(n) {
@@ -233,7 +230,9 @@ function hitungLamda(a, b) {
     }
     return result;
 }
+//////////////////////////////
 
+///////////// Topsis
 function hitungTopsis(alt, w, crit) {
     // buat matrix keputusan
     const matrix = matKeputusan(alt);
@@ -254,15 +253,6 @@ function hitungTopsis(alt, w, crit) {
 
     //hitung nilai preferensi/hasil
     const hasil = hitungHasil(jarakPositif, jarakNegatif);
-
-    // console.log(matrix);
-    // console.log(normal);
-    // console.log(terbobot);
-    // console.log(idealPositif);
-    // console.log(idealNegatif);
-    // console.log(jarakPositif);
-    // console.log(jarakNegatif);
-    // console.log(hasil);
 
     return hasil;
 }
@@ -388,6 +378,7 @@ function hitungHasil(jp, jn) {
     }
     return result;
 }
+//////////////////////////////////////
 
 function hitungRangking(arr) {
     let sort = arr.slice().sort((a, b) => b - a);

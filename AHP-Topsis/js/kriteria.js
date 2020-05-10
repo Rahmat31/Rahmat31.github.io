@@ -1,3 +1,4 @@
+////////////// Event
 const navButton = document.getElementById("navButton");
 const mySidenav = document.getElementById("mySidenav");
 const topNav = document.getElementById("topNav");
